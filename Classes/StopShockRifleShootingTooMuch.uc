@@ -13,4 +13,5 @@ simulated function tick(float DeltaTime)
 defaultproperties
 {
 	RemoteRole=ROLE_SimulatedProxy
+	bHidden=True
 }
