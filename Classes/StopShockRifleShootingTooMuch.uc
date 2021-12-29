@@ -1,11 +1,16 @@
 class StopShockRifleShootingTooMuch expands Actor;
 
-function tick(float DeltaTime)
+simulated function tick(float DeltaTime)
 {
-	local SuperShockRifle rifle;
+	local ShockRifle rifle;
 
-	foreach AllActors(class'Botpack.SuperShockRifle', rifle) {
+	foreach AllActors(class'Botpack.ShockRifle', rifle) {
 		rifle.bForceFire = false;
 		rifle.bForceAltFire = false;
 	}
+}
+
+defaultproperties
+{
+	RemoteRole=ROLE_SimulatedProxy
 }
