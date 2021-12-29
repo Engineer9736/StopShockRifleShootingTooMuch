@@ -1,10 +1,8 @@
-class StopShockRifleShootingTooMuch expands Mutator config;
+class StopShockRifleShootingTooMuch expands Actor;
 
 function tick(float DeltaTime)
 {
 	local SuperShockRifle rifle;
-
-	Super.tick(DeltaTime);
 
 	foreach AllActors(class'Botpack.SuperShockRifle', rifle) {
 		rifle.bForceFire = false;
